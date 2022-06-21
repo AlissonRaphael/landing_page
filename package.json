@@ -1,0 +1,10 @@
+{
+  "name": "landing_page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Alisson Oliveira",
+  "license": "MIT",
+  "scripts": {}
+}
