@@ -4,7 +4,20 @@ export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
 
   :root {
-    // define colors
+    --background-main-color: #191e23;
+    --background-card-color: #222931;
+    --background-side-color: #1d2228;
+
+    --white-text: #fff;
+    --gray-600-text: #7A899D;
+    --gray-400-text: #2f3945;
+    --gray-300-text: #444e5b;
+    --gray-200-text: #313b47;
+    --gray-100-text: #1b2126;
+
+    --primary: #f3ad33;
+    --secondary: #2A323C;
+
   }
 
   * {
@@ -21,8 +34,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #35363a;
-    color: #fff;
+    background-color: var(--background-main-color);
+    color: var(--gray-600-text);
   }
 
   body, input, textarea, button {
