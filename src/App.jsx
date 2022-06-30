@@ -20,10 +20,10 @@ export default function App () {
       <Section>
         <Headline/>
         <VSL/>
-        <Action/>
+        {/* <Action/> */}
       </Section>
 
-      <Section>
+      {/* <Section>
         <Lead/>
         <History/>
         <Pitch/>
@@ -43,7 +43,7 @@ export default function App () {
         <FAQ/>
       </Section>
 
-      <Footer/>
+      <Footer/> */}
 
       <GlobalStyle/>
     </>

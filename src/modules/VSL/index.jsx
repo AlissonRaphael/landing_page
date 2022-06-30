@@ -1,9 +1,9 @@
-import { ContainerStyle } from './styles'
+import { ContainerStyle, Video } from './styles'
 
 export default function VSL () {
   return (
     <ContainerStyle>
-      VSL
+      <Video/>
     </ContainerStyle>
   )
 }

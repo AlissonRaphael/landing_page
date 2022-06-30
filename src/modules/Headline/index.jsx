@@ -1,9 +1,12 @@
-import { HeaderStyle } from './styles'
+import { HeaderStyle, TitleStyle } from './styles'
+
 
 export default function Headline () {
   return (
     <HeaderStyle>
-      Headline
+      <TitleStyle>
+        Lorem ipsum dolor sit <span>adipisicing elit</span>. Tempore doloribus architecto minus vero praesentium.
+      </TitleStyle>
     </HeaderStyle>
   )
 }
