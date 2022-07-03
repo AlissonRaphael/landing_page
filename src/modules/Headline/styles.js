@@ -3,17 +3,17 @@ import styled from 'styled-components'
 export const HeaderStyle = styled.header`
   width: 100%;
   max-width: 1440px;
-  padding: 3rem;
+  padding: 8rem;
 
 
   // tablet props
   @media (max-width: 768px) {
-    padding: 2rem;
+    padding: 6rem 2rem;
   }
 
   // mobile props
   @media (max-width: 425px) {
-    padding: 1.5rem;
+    padding: 3rem 1.5rem;
   }
 `
 
