@@ -17,7 +17,8 @@ import Footer from './modules/Footer'
 export default function App () {
   return (
     <>
-      <Section>
+      <Header/>
+
         <Headline/>
         <VSL/>
         {/* <Action/> */}
