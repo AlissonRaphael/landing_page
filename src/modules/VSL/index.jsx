@@ -59,7 +59,7 @@ function AudioButton () {
   return (
     <div className="button">
       <div>
-        <span>O vídeo já começou,</span>
+        <span>O vídeo começou</span>
         <Volume/>
         <span>{interaction === 'click' ? 'Click' : 'Toque'} para ouvir.</span>
       </div>

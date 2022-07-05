@@ -51,18 +51,18 @@ export const Player = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 101;
+    z-index: 100;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     div {
-      font-size: 1.2rem;
+      font-size: 0.8rem;
       color: var(--white-text);
       background-color: var(--primary);
       border-radius: 0.3rem;
-      padding: 1.5rem;
+      padding: 1rem;
       opacity: 0.9;
 
       display: flex;
