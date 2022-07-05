@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import ReactPlayer from 'react-player'
 
 import Gif from '../../assets/gif.gif'
 
@@ -6,36 +7,59 @@ import Volume from './SVG'
 import { ContainerStyle, Player } from './styles'
 
 export default function VSL () {
+  const [init, setInit] = useState(false)
+  const [play, setPlay] = useState(false)
+
+  const handleClick = () => {
+    setInit(true)
+    setPlay(!play)
+  }
+
   return (
     <ContainerStyle>
       <Player>
-        <Film/>
-        <AudioButton/>
-        <Thumbnail/>
-        <Video/>
+        <Film handleClick={handleClick}/>
+        { !init ? <Thumbnail/> : null }
+        { !play ? <AudioButton/> : null }
+        <Video play={play}/>
       </Player>
     </ContainerStyle>
   )
 }
 
-function Film () {
+function Film ({ handleClick }) {
   return (
     <div
       className="film"
-      onClick={() => console.log('play/pause video')}
+      onClick={() => handleClick()}
     >
     </div>
   )
 }
 
-function Video () {
+function Video ({ play }) {
+  const [duration, setDuration] = useState(0)
+
   return (
-    <iframe
-      className="video"
-      src={process.env.URL_VIDEO}
-      frameborder="0"
-    >
-    </iframe>
+    <>
+      <ReactPlayer
+        className='video'
+        height={0}
+        width={0}
+        url={process.env.URL_VIDEO} playing={play}
+        controls={false}
+        onDuration={(time) => setDuration(time)}
+        config={{
+          youtube: {
+            playerVars: {
+              showinfo: 0,
+              modestbranding: 1,
+              disablekb: 1
+            }
+          }
+        }}
+      />
+    </>
   )
 }
 
