@@ -138,3 +138,21 @@ export const Player = styled.div`
     z-index: 1;
   }
 `
+
+export const ProgressionBar = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 8px;
+  background-color: var(--primary);
+  animation: PROGRESS ${props => props.duration}s cubic-bezier(0, 0.5, 0.5, 1);
+  animation-play-state: ${props => props.isPlay ? 'running' : 'paused' };
+
+  @keyframes PROGRESS {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+
+`

@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player'
 import Gif from '../../assets/gif.gif'
 
 import Volume from './SVG'
-import { ContainerStyle, Player } from './styles'
+import { ContainerStyle, Player, ProgressionBar } from './styles'
 
 export default function VSL () {
   const [init, setInit] = useState(false)
@@ -58,6 +58,10 @@ function Video ({ play }) {
             }
           }
         }}
+      />
+      <ProgressionBar
+        duration={duration} 
+        isPlay={play}
       />
     </>
   )
