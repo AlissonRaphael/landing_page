@@ -5,7 +5,6 @@ export const ContainerStyle = styled.div`
   max-width: 1440px;
   padding: 0 6rem;
 
-
   // tablet props
   @media (max-width: 768px) {
     padding: 0 4rem;
@@ -15,7 +14,6 @@ export const ContainerStyle = styled.div`
   @media (max-width: 425px) {
     padding: 0 1.5rem;
   }
-
 `
 
 export const Player = styled.div`
@@ -63,7 +61,6 @@ export const Player = styled.div`
       background-color: var(--primary);
       border-radius: 0.3rem;
       padding: 1rem;
-      opacity: 0.9;
 
       display: flex;
       align-items: center;
@@ -129,13 +126,19 @@ export const Player = styled.div`
 
   .video {
     border-radius: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--background-card-color);
-    z-index: 1;
+    div {
+      border-radius: inherit;
+      iframe {
+        border-radius: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--background-card-color);
+        z-index: 1;
+      }
+    }
   }
 `
 
