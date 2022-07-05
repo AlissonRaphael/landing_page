@@ -3,6 +3,7 @@ import { GlobalStyle } from './styles/global'
 import Section from './components/Section'
 import Action from './components/Action'
 
+import Header from './modules/Header'
 import Headline from './modules/Headline'
 import VSL from './modules/VSL'
 import Lead from './modules/Lead'
@@ -19,9 +20,10 @@ export default function App () {
     <>
       <Header/>
 
+      <Section isMain={true}>
         <Headline/>
         <VSL/>
-        {/* <Action/> */}
+        <Action/>
       </Section>
 
       {/* <Section>
