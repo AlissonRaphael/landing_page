@@ -19,18 +19,18 @@ export const ContainerStyle = styled.div`
 export const Player = styled.div`
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
-  border-radius: 0.5rem;
+  border-radius: 0.5rem  0.5rem  0rem  0rem;
   border: 2px solid var(--primary);
   height: 0;
 
   // tablet props
   @media (max-width: 768px) {
-    border-radius: 0.4rem;
+    border-radius: 0.4rem  0.4rem  0rem  0rem;
   }
 
   // mobile props
   @media (max-width: 425px) {
-    border-radius: 0.3rem;
+    border-radius: 0.3rem  0.3rem  0rem  0rem;
   }
 
   .film {
@@ -40,7 +40,8 @@ export const Player = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 100;
+    z-index: 101;
+    cursor: pointer;
   }
 
   .button {
