@@ -140,6 +140,17 @@ export const Player = styled.div`
         z-index: 1;
       }
     }
+
+    .wistia_embed.wistia_async_t42ibex20d.wistia_embed_initialized {
+      border-radius: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--background-card-color);
+      z-index: 1;
+    }
   }
 `
 

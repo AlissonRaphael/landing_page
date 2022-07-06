@@ -49,14 +49,31 @@ function Video ({ play }) {
         height={0}
         width={0}
         url={URL}
-        controls={false}
+        playing={play}
         onDuration={(time) => setDuration(time)}
         config={{
           youtube: {
             playerVars: {
+              controls: 0,
               showinfo: 0,
               modestbranding: 1,
-              disablekb: 1
+              disablekb: 1,
+              fs: 0,
+              rel: 0,
+            }
+          },
+          vimeo: {
+            playerOptions: {
+              controls: false,
+              byline: false,
+              title: false,
+              playsinline: false,
+              keyboard: false
+            }
+          },
+          wistia: {
+            options: {
+
             }
           }
         }}
