@@ -6,6 +6,8 @@ import Gif from '../../assets/gif.gif'
 import Volume from './SVG'
 import { ContainerStyle, Player, ProgressionBar } from './styles'
 
+const URL = process.env.URL_VIDEO
+
 export default function VSL () {
   const [init, setInit] = useState(false)
   const [play, setPlay] = useState(false)
@@ -46,7 +48,7 @@ function Video ({ play }) {
         className='video'
         height={0}
         width={0}
-        url={process.env.URL_VIDEO} playing={play}
+        url={URL}
         controls={false}
         onDuration={(time) => setDuration(time)}
         config={{
