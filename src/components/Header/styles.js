@@ -1,66 +1,56 @@
 import styled from 'styled-components'
 
-export const HeaderStyle = styled.header`
-  width: 100%;
-  padding: 1.2rem;
+export const HeaderContainer = styled.header`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
   border-bottom: 1px solid var(--background-card-color);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 14px 28px;
 
-  // mobile props
-  @media (max-width: 425px) {
-    padding: 0.8rem;
-  }
+  width: 100%;
 `
 
-export const NavStyle = styled.header`
+export const HeaderStyle = styled.div`
   margin: auto;
+
   max-width: 1440px;
+
+  padding: 1.2rem;
+  @media (max-width: 425px) { padding: 1rem; } // mobile props
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-
   img {
     width: 100px;
+    @media (max-width: 768px) { width: 90px; } // tablet props
+    @media (max-width: 425px) { width: 70px; } // mobile props
+  }
+`
 
-    // tablet props
-    @media (max-width: 768px) {
-      width: 90px;
-    }
+export const Links = styled.nav`
+  ul { display: flex; }
 
-    // mobile props
-    @media (max-width: 425px) {
-      width: 70px;
-    }
+  li {
+    list-style: none;
+
+    margin-left: 1rem;
+    :first-child { margin-left: 0rem; }
   }
 
-  nav {
-    ul {
-      display: flex;
-    }
+  a {
+    font-size: 0.8rem;
+    color: var(--gray-600-text);
+    text-decoration: none;
+    transition: all 0.8s ease;
 
-    li {
-      list-style: none;
-      margin-left: 1rem;
-
-      :first-child {
-        margin-left: 0rem;
-      }
-    }
-
-    a {
-      font-size: 0.8rem;
-      color: var(--gray-600-text);
-      text-decoration: none;
-      transition: all 0.8s ease;
-
-      :hover {
-        color: var(--white-text);
-      }
+    :hover {
+      color: var(--white-text);
     }
   }
-
 `
 
 export const Burger = styled.div`
