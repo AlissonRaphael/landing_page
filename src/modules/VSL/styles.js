@@ -1,19 +1,12 @@
 import styled from 'styled-components'
 
-export const ContainerStyle = styled.div`
-  width: 100%;
+export const VSLContainer = styled.div`
   max-width: 1440px;
+  width: 100%;
+
   padding: 0 6rem;
-
-  // tablet props
-  @media (max-width: 768px) {
-    padding: 0 4rem;
-  }
-
-  // mobile props
-  @media (max-width: 425px) {
-    padding: 0 1.5rem;
-  }
+  @media (max-width: 768px) { padding: 2rem 4rem; } // tablet props
+  @media (max-width: 425px) { padding: 1rem 2rem; } // mobile props
 `
 
 export const Player = styled.div`

@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player'
 import Gif from '../../assets/gif.gif'
 
 import Volume from './SVG'
-import { ContainerStyle, Player, ProgressionBar } from './styles'
+import { VSLContainer, Player, ProgressionBar } from './styles'
 
 const URL = process.env.URL_VIDEO
 
@@ -18,14 +18,14 @@ export default function VSL () {
   }
 
   return (
-    <ContainerStyle>
+    <VSLContainer>
       <Player>
         <Film handleClick={handleClick}/>
         { !init ? <Thumbnail/> : null }
         { !play ? <AudioButton/> : null }
         <Video play={play}/>
       </Player>
-    </ContainerStyle>
+    </VSLContainer>
   )
 }
 
