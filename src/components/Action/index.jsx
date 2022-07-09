@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { ContainerStyle } from './styles'
+
+import { ActionContainer, Button } from './styles'
 import Download from '../../assets/download.svg'
 
 const DELAY_BUTTOM = process.env.DELAY_BUTTON
@@ -9,16 +10,16 @@ export default function Action () {
 
   setInterval(() => {
     setShowButton(true)
-  },DELAY_BUTTOM*1000);
+  },DELAY_BUTTOM*1000)
 
   return (
-    <ContainerStyle>
+    <ActionContainer>
       { showButton ?
-        <a href="">
+        <Button href="">
           <img src={Download}/>
           <span>Baixar agora</span>
-        </a> : null
+        </Button> : null
       }
-    </ContainerStyle>
+    </ActionContainer>
   )
 }

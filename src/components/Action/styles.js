@@ -1,56 +1,56 @@
 import styled from 'styled-components'
 
-export const ContainerStyle = styled.div`
-  padding: 4rem;
-  position: relative;
+export const ActionContainer = styled.div`
+  max-width: 1440px;
+  width: 100%;
 
-  // tablet props
-  @media (max-width: 768px) {
-    padding: 3rem;
+  padding: 2rem 6rem;
+  @media (max-width: 768px) { padding: 2rem 4rem; } // tablet props
+  @media (max-width: 425px) { padding: 1rem 2rem; } // mobile props
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const Button = styled.a`
+  @media (min-width: 769px) { width: 20%; } // tablet props
+  @media (max-width: 768px) { width: 100%; } // tablet props
+  @media (max-width: 425px) { width: 100%; } // mobile props
+
+  padding: 1.5rem 2rem;
+  @media (max-width: 768px) { padding: 1.3rem 2.8rem; } // tablet props
+  @media (max-width: 425px) { padding: 1rem 2rem; } // mobile props
+
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primary);
+  color: rgba(240,240,240,1);
+
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  img {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.6rem;
+    fill: #fff;
   }
 
-  // mobile props
-  @media (max-width: 425px) {
-    padding: 2rem;
+  :hover {
+    color: rgba(255,255,255,1);
+    animation: BOUNCE 1s ease-in-out infinite;
   }
 
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(240,240,240,1);
-    background-color: var(--primary);
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-
-    padding: 1.3rem 2.8rem;
-    @media (max-width: 768px) { padding: 1.3rem 2.8rem; } // tablet props
-    @media (max-width: 425px) { padding: 1rem 2rem; } // mobile props
-
-    span {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    img {
-      width: 25px;
-      height: 25px;
-      margin-right: 0.6rem;
-      fill: #fff;
-    }
-
-    :hover {
-      color: rgba(255,255,255,1);
-      padding: 1.3rem 4rem;
-      animation: BOUNCE 1s ease-in-out infinite;
-
-      @keyframes BOUNCE {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.08); }
-        100% { transform: scale(1); }
-      }
-    }
+  @keyframes BOUNCE {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
   }
 `
