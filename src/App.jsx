@@ -1,54 +1,33 @@
 import { GlobalStyle } from './styles/global'
 
-import Section from './components/Section'
+import Header from './components/Header'
+import Main from './components/Main'
 import Action from './components/Action'
+import Page from './components/Page'
 
-import Header from './modules/Header'
 import Headline from './modules/Headline'
 import VSL from './modules/VSL'
+import SubHeadline from './modules/SubHeadline'
 import Lead from './modules/Lead'
 import History from './modules/History'
-import Pitch from './modules/Pitch'
-import Offer from './modules/Offer'
-import Authority from './modules/Authority'
-import Guarantee from './modules/Guarantee'
-import FAQ from './modules/FAQ'
-import Footer from './modules/Footer'
 
 export default function App () {
   return (
     <>
       <Header/>
 
-      <Section isMain={true}>
+      <Main>
         <Headline/>
         <VSL/>
+        <SubHeadline/>
         <Action/>
-      </Section>
+      </Main>
 
-      {/* <Section>
+      <Page>
         <Lead/>
         <History/>
-        <Pitch/>
-      </Section>
+      </Page>
 
-      <Section>
-        <Authority/>
-      </Section>
-
-      <Section>
-        <Offer/>
-        <Guarantee/>
-        <Action/>
-      </Section>
-
-      <Section>
-        <FAQ/>
-      </Section>
-
-      <Footer/> */}
-
-      <Footer/>
       <GlobalStyle/>
     </>
   )
