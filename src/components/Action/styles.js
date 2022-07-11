@@ -14,7 +14,6 @@ export const ActionContainer = styled.div`
 `
 
 export const Button = styled.a`
-  @media (min-width: 769px) { width: 20%; } // tablet props
   @media (max-width: 768px) { width: 100%; } // tablet props
   @media (max-width: 425px) { width: 100%; } // mobile props
 
@@ -25,6 +24,7 @@ export const Button = styled.a`
   border-radius: 0.5rem;
 
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
 
@@ -39,7 +39,7 @@ export const Button = styled.a`
   img {
     width: 25px;
     height: 25px;
-    margin-right: 0.6rem;
+    margin-right: 0.8rem;
     fill: #fff;
   }
 
