@@ -20,6 +20,12 @@ export default function Lead () {
         <p>
           Possimus soluta atque aspernatur obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>
+        <p>
+          Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste, rem dolore in, eius quis nemo?
+        </p>
+        <p>
+          Possimus soluta atque aspernatur obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
       </Article>
       <SectionTitle>sobre</SectionTitle>
     </LeadContainer>
