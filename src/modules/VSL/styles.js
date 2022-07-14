@@ -4,7 +4,7 @@ export const VSLContainer = styled.div`
   max-width: 1440px;
   width: 100%;
 
-  padding: 0 6rem;
+  padding: 0 10rem;
   @media (max-width: 768px) { padding: 2rem 4rem; } // tablet props
   @media (max-width: 425px) { padding: 1rem 2rem; } // mobile props
 `

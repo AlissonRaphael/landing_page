@@ -27,6 +27,7 @@ export const CompContainer = styled.div`
 `
 
 export const MainContainer = styled.aside`
+  padding-top: 10rem;
   width: 100%;
   height: 100%;
 
@@ -42,10 +43,10 @@ export const SideContainer = styled.aside`
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 5rem;
-    margin: 5rem 2rem;
+    margin: 10rem 2rem;
   
     img {
-      width: 70%;
+      width: 50%;
     }
   }
 `
@@ -54,7 +55,7 @@ export const PageTitle = styled.div`
   margin-right: 10rem;
   width: 90%;
 
-  height: 30rem;
+  height: 20rem;
   background-image: url(${Image1});
   background-size: cover;
 `

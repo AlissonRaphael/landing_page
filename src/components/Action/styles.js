@@ -4,7 +4,7 @@ export const ActionContainer = styled.div`
   max-width: 1440px;
   width: 100%;
 
-  padding: 2rem 6rem;
+  padding: 2rem 10rem 6rem 10rem;
   @media (max-width: 768px) { padding: 2rem 4rem; } // tablet props
   @media (max-width: 425px) { padding: 1rem 2rem; } // mobile props
 
@@ -17,7 +17,7 @@ export const Button = styled.a`
   @media (max-width: 768px) { width: 100%; } // tablet props
   @media (max-width: 425px) { width: 100%; } // mobile props
 
-  padding: 1.5rem 2rem;
+  padding: 1.3rem 2.5rem;
   @media (max-width: 768px) { padding: 1.3rem 2.8rem; } // tablet props
   @media (max-width: 425px) { padding: 1rem 2rem; } // mobile props
 

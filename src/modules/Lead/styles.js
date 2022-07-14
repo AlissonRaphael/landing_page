@@ -7,7 +7,7 @@ export const LeadContainer = styled.div`
 
   width: 100%;
 
-  padding: 4rem;
+  padding: 4rem 4rem 0 4rem;
   @media (max-width: 768px) { padding: 4rem 3rem; } // tablet props
   @media (max-width: 425px) { padding: 3rem 2rem; } // mobile props
 

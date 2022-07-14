@@ -14,7 +14,7 @@ export const SubHeadlineStyle = styled.div`
     }
   }
 
-  padding: 2rem 6rem;
+  padding: 2rem 10rem;
   @media (max-width: 768px) { padding: 2rem 4rem; } // tablet props
   @media (max-width: 425px) { padding: 2rem 2rem; } // mobile props
 `
