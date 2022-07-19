@@ -19,12 +19,14 @@ export const GlobalStyle = createGlobalStyle`
     --primary: #f3ad33;
     --secondary: #2A323C;
 
+    --primary-darken: #e7a430;
   }
 
   * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
