@@ -64,9 +64,11 @@ export default function VSL () {
   const AudioButton = () => {
     return <div className="button">
       <div>
-        <span>O vídeo começou</span>
         <Volume/>
         <span>{interaction} para ouvir.</span>
+        <div className="circle-i"></div>
+        <div className="circle-ii"></div>
+        <div className="circle-iii"></div>
       </div>
     </div>
   }
