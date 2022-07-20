@@ -8,13 +8,18 @@ export const HeadlineContainer = styled.div`
   max-width: 1440px;
   width: 100%;
 
-  padding: 8rem;
+  padding: 8rem 14rem;
   @media (max-width: 768px) { padding: 4rem 3rem; } // tablet props
   @media (max-width: 425px) { padding: 3rem 2rem; } // mobile props
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
 
 export const TitleStyle = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   @media (max-width: 768px) { font-size: 2rem; } // tablet props
   @media (max-width: 425px) { font-size: 1.5rem; } // tablet props
 
@@ -25,6 +30,25 @@ export const TitleStyle = styled.h1`
   @media (max-width: 425px) { text-align: left; } // mobile props
 
   color: var(--white-text);
+
+  span {
+    color: var(--primary);
+  }
+`
+
+export const SubTitleStyle = styled.h2`
+  margin-top: 1.5rem;
+
+  max-width: 780px;
+
+  font-size: 1rem;
+  @media (max-width: 768px) { font-size: 1.1rem; } // tablet props
+  @media (max-width: 425px) { font-size: 0.8rem; } // tablet props
+
+  text-align: center;
+  @media (max-width: 425px) { text-align: left; } // mobile props
+
+  color: var(--gray-600-text);
 
   span {
     color: var(--primary);
