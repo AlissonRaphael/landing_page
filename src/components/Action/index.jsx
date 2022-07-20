@@ -16,7 +16,9 @@ export default function Action () {
     <ActionContainer>
       { showButton ?
         <Button href="">
-          <img src={Icon}/>
+          <div>
+            <img src={Icon}/>
+          </div>
           <span>Sim, desejo obter</span>
         </Button> : null
       }

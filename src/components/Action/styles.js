@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Pattern from '../../assets/stripes.svg'
 
 export const ActionContainer = styled.div`
   max-width: 1440px;
@@ -14,14 +15,7 @@ export const ActionContainer = styled.div`
 `
 
 export const Button = styled.a`
-  @media (max-width: 768px) { width: 100%; } // tablet props
-  @media (max-width: 425px) { width: 100%; } // mobile props
-
-  padding: 1.3rem 2.5rem;
-  @media (max-width: 768px) { padding: 1.3rem 2.8rem; } // tablet props
-  @media (max-width: 425px) { padding: 1rem 2rem; } // mobile props
-
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
 
   display: flex;
   flex-wrap: nowrap;
@@ -36,21 +30,46 @@ export const Button = styled.a`
   text-transform: uppercase;
   text-decoration: none;
 
+  transition: background-color 0.2s ease-in-out;
+
+  div {
+    padding: 1rem 1.5rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+    background-color: rgba(0,0,0,0.1);
+  }
+
   img {
     width: 25px;
-    height: 25px;
-    margin-right: 0.8rem;
-    fill: #fff;
+  }
+
+  span {
+    padding: 1rem 1.5rem;
+    padding-left: 1rem;
   }
 
   :hover {
-    color: rgba(255,255,255,1);
-    animation: BOUNCE 1s ease-in-out infinite;
+    background-image: url(${Pattern});
+    background-size: 30px;
+    background-position: 0%;
+
+    animation: PATTERN_ANIMATION 10s linear infinite;
+
+    img {
+      animation: HOVER_ICON 1s;
+    }
   }
 
-  @keyframes BOUNCE {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
+  @keyframes HOVER_ICON {
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    50% { transform: scale(1.2) }
+    75% { transform: rotate(15deg); }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+
+  @keyframes PATTERN_ANIMATION {
+    0% { background-position: 0%; }
+    100% { background-position: 100%; }
   }
 `
