@@ -10,6 +10,7 @@ export const HeaderContainer = styled.header`
   box-shadow: rgba(0, 0, 0, 0.2) 0px 14px 28px;
 
   width: 100%;
+  background-color: var(--background-main-color);
 `
 
 export const HeaderStyle = styled.div`

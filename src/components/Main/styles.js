@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import Background from '../../assets/background.svg'
+
 export const Container = styled.main`
   width: 100%;
 
@@ -11,6 +13,37 @@ export const Container = styled.main`
 
   // mobile props
   @media (max-width: 425px) { height: 100vh; }
+
+  background-image: url(${Background});
+  z-index: 0;
+
+  ::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`
+
+export const RadialBackground = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at bottom, var(--primary) 0%, transparent 70%);
+  opacity: 0.1;
+
+  animation: LIGHT 7s ease-in-out infinite;
+
+  @keyframes LIGHT {
+    0% { opacity: 0.1; }
+    75% { opacity: 0.3; }
+    100% { opacity: 0.1; }
+  }
 `
 
 export const SquareBackground = styled.div`
