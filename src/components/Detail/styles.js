@@ -19,3 +19,51 @@ export const DetailStyles = styled.div`
   height: 80px;
   background: linear-gradient(180deg, var(--primary), transparent);
 `
+
+export const VerticalLineStyles = styled.div`
+  position: relative;
+  height: 100%;
+
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.2);
+  }
+
+  .line {
+    position: absolute;
+    top: 16px;
+    left: 4px;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(255,255,255,0.2);
+  }
+`
+
+export const HorizontalLineStyles = styled.div`
+  position: relative;
+  width: 100%;
+
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.2);
+  }
+
+  .line {
+    position: absolute;
+    top: 4px;
+    left: 16px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255,255,255,0.2);
+  }
+`

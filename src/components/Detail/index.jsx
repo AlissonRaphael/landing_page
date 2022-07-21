@@ -1,9 +1,27 @@
-import { ContainerStyle, DetailStyles } from './styles'
+import { ContainerStyle, DetailStyles, VerticalLineStyles, HorizontalLineStyles } from './styles'
 
-export default function Detail () {
+export function ContainerLineDetail () {
   return (
     <ContainerStyle>
       <DetailStyles/>
     </ContainerStyle>
+  )
+}
+
+export function VerticalLineDetail ({height}) {
+  return (
+    <VerticalLineStyles height={height}>
+      <div className="circle"></div>
+      <div className="line"></div>
+    </VerticalLineStyles>
+  )
+}
+
+export function HorizontalLineDetail ({height}) {
+  return (
+    <HorizontalLineStyles height={height}>
+      <div className="circle"></div>
+      <div className="line"></div>
+    </HorizontalLineStyles>
   )
 }
