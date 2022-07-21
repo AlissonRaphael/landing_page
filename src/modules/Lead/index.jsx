@@ -1,33 +1,26 @@
-import SectionTitle from '../../components/SectionTitle'
-import Image2 from '../../assets/image2.jpg'
-
-import { LeadContainer, ImageSection, Article } from './styles'
+import { LeadContainer, Title, Article, LineContainer, Box, Text } from './styles'
+import { VerticalLineDetail } from '../../components/Detail'
 
 export default function Lead () {
   return (
     <LeadContainer>
-      <ImageSection>
-        <img src={Image2}/>
-      </ImageSection>
-
+      <Title>Antes de tudo, precisamos ser sinceros neste momento</Title>
       <Article>
-        <h1>Antes de tudo, precisamos ser sinceros neste momento</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste, rem dolore in, eius quis nemo?
-          Quo modi cum repudiandae, autem assumenda earum, mollitia sequi doloremque dolor dolorem iusto nemo veritatis excepturi fugit.
-        </p>
-        <p>
-          Possimus soluta atque aspernatur obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
-        <p>
-          Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste, rem dolore in, eius quis nemo?
-        </p>
-        <p>
-          Possimus soluta atque aspernatur obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
+        <Box/>
+        <VerticalLineDetail/>
+        <Text>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste, rem dolore in, eius quis nemo?
+          </p>
+          <p>
+            Possimus soluta atque aspernatur obcaecati! Ipsum dolor sit amet.
+          </p>
+          <p>
+            Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste.
+          </p>
+        </Text>
       </Article>
-      <SectionTitle>sobre</SectionTitle>
     </LeadContainer>
   )
 }
