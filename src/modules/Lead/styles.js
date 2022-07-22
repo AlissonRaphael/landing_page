@@ -6,7 +6,7 @@ export const LeadContainer = styled.div`
 
   padding: 7rem 14rem 7rem 14rem;
   @media (max-width: 768px) { padding: 7rem 4rem 4rem 4rem; } // tablet props
-  @media (max-width: 425px) { padding: 1rem 2rem; } // mobile props
+  @media (max-width: 425px) { padding: 3rem 2rem 3rem 2rem; } // mobile props
 
   display: flex;
   flex-direction: column;
