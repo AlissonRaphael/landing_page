@@ -42,34 +42,18 @@ export const Text = styled.div`
     margin: 4rem 0 0 0;
     @media (max-width: 768px) { margin: 2rem 0 0 0 } // tablet props
 
-    max-width: 40%;
+    max-width: 100%;
     @media (max-width: 768px) { max-width: 100%; } // tablet props
 
     align-self: start;
     position: relative;
-
-     // tablet props
-    @media (min-width: 769px) {
-      ::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: -140%;
-        width: 120%;
-        height: 120%;
-
-        z-index: -20;
-
-        border: 1px solid var(--background-card-color);
-      }
-    }
   }
 
   &.end {
     margin: 0 0 4rem 0;
     @media (max-width: 768px) { margin: 0 0 2rem 0 } // tablet props
 
-    max-width: 60%;
+    max-width: 70%;
     @media (max-width: 768px) { max-width: 100%; } // tablet props
 
     align-self: end;
@@ -80,16 +64,16 @@ export const Text = styled.div`
       ::before {
         content: '';
         position: absolute;
-        top: -30%;
+        top: -25%;
         @media (max-width: 768px) { top: -50%; } // tablet props
 
-        left: -25%;
+        left: -20%;
         @media (max-width: 768px) { left: 25%; } // tablet props
 
-        width: 65%;
+        width: 40%;
         @media (max-width: 768px) { width: 50%; } // tablet props
 
-        height: 320%;
+        height: 300%;
         @media (max-width: 768px) { height: 340%; } // tablet props
         z-index: -20;
 
@@ -158,7 +142,7 @@ export const Links = styled.nav`
 
 export const LineContainer = styled.div`
   width: 100%;
-  max-width: 60%;
+  max-width: 70%;
   @media (max-width: 768px) { max-width: 100%; } // tablet props
 
   align-self: end;
