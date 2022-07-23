@@ -1,10 +1,13 @@
 import styled from 'styled-components'
 
+import Plus from '../../assets/plus.svg'
+
+
 export const PitchContainer = styled.div`
   max-width: 1440px;
   width: 100%;
 
-  padding: 7rem 14rem 14rem 14rem;
+  padding: 7rem 14rem 7rem 14rem;
   @media (max-width: 768px) { padding: 7rem 4rem 4rem 4rem; } // tablet props
   @media (max-width: 425px) { padding: 3rem 2rem 3rem 2rem; } // mobile props
 
@@ -61,6 +64,16 @@ export const Card = styled.li`
   background-color: var(--background-side-color);
   position: relative;
 
+  .plus {
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    height: 20px;
+
+    margin: 0;
+    padding: 0;
+  }
+
   .ball {
     position: absolute;
     top: calc(50% - 7.5px);
@@ -81,16 +94,19 @@ export const Card = styled.li`
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 3px;
-    height: 15px;
+    width: 1px;
+    height: 50%;
+    background: linear-gradient(180deg, transparent, var(--primary));
   }
 
   .horizontal {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 15px;
-    height: 3px;
+    width: 50%;
+    height: 1px;
+
+    background: linear-gradient(90deg, transparent, var(--primary));
   }
 
   img {

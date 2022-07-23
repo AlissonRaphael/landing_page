@@ -6,12 +6,14 @@ import Icon5 from '../../assets/product/icon5.svg'
 import Icon6 from '../../assets/product/icon6.svg'
 
 import { PitchContainer, Title, Text, Cards, Card } from './styles'
+import Plus from '../../assets/plus.svg'
 
 const data = [
   {
     title: 'Lorem ipsum',
     icon: Icon1,
     color: '#25D366',
+    plus: true,
     description: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
   },
   {
@@ -30,6 +32,7 @@ const data = [
     title: 'Ipsum dolor',
     icon: Icon4,
     color: '#FF0000',
+    plus: true,
     description: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
   },
   {
@@ -42,6 +45,7 @@ const data = [
     title: 'Ipsum dolor',
     icon: Icon6,
     color: '#00B2FF',
+    plus: true,
     description: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
   }
 ]
@@ -59,8 +63,9 @@ export default function Pitch () {
 
       <Cards>
         {
-          data.map(({ title, icon, color, description }, index) => (
+          data.map(({ title, icon, color, plus, description }, index) => (
             <Card color={color}>
+              { plus ? <img className="plus" src={Plus}/> : null }
               <i className="ball"></i>
               <i className="vertical"></i>
               <i className="horizontal"></i>
