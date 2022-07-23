@@ -1,6 +1,5 @@
 import Money from '../../assets/guarantee/money.svg'
 import Arrow from '../../assets/guarantee/arrow.svg'
-import ArrowOut from '../../assets/guarantee/arrow_out.svg'
 import Credit from '../../assets/guarantee/credit.svg'
 import Visa from '../../assets/guarantee/visa.svg'
 import Mastercard from '../../assets/guarantee/mastercard.svg'
@@ -24,15 +23,14 @@ export default function Guarantee () {
           <div className="b">Compra segura</div>
           <img className="c" src={Arrow} />
 
-          <img className="d" src={Icon4} />
+          <img className="d"/>
           <div className="e">
             <div></div>
           </div>
-          <img className="f" src={Icon5} />
+          <img className="f" />
 
-          <img className="g" src={ArrowOut} />
+          <img className="g" src={Arrow} />
           <div className="h">
-            <img src={Credit} />
             <img src={Visa}/>
             <img src={Mastercard}/>
             <img className="paypal" src={Paypal}/>

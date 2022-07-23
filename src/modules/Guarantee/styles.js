@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import GuaranteeFile from '../../assets/guarantee/guarantee.svg'
 
 export const Container = styled.section`
   width: 100%;
@@ -60,7 +61,7 @@ export const Grid = styled.div`
 
   .c {
     grid-area: c;
-    height: 25px;
+    height: 20px;
   }
 
 
@@ -79,11 +80,10 @@ export const Grid = styled.div`
     justify-content: center;
 
     div {
-      border-radius: 50%;
-      width: 200px;
-      height: 200px;
-
-      background-color: black;
+      width: 300px;
+      height: 287px;
+      background-image: url(${GuaranteeFile});
+      background-size: cover;
     }
 
   }
@@ -96,7 +96,8 @@ export const Grid = styled.div`
 
   .g {
     grid-area: g;
-    height: 25px;
+    height: 20px;
+    transform: rotate(180deg);
   }
 
   .h {
@@ -112,7 +113,7 @@ export const Grid = styled.div`
       margin-right: 0.8rem;
 
       &.pix, &.paypal {
-        height: 20px;
+        height: 17px;
       }
     }
   }
