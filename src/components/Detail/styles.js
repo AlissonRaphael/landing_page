@@ -31,7 +31,7 @@ export const VerticalLineStyles = styled.div`
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background-color: rgba(255,255,255,0.2);
+    background-color: var(--primary);
   }
 
   .line {
@@ -40,7 +40,7 @@ export const VerticalLineStyles = styled.div`
     left: 4px;
     width: 1px;
     height: 100%;
-    background-color: rgba(255,255,255,0.2);
+    background-color: var(--primary);
   }
 `
 
@@ -55,7 +55,7 @@ export const HorizontalLineStyles = styled.div`
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background-color: rgba(255,255,255,0.2);
+    background-color: var(--primary);
   }
 
   .line {
@@ -64,6 +64,6 @@ export const HorizontalLineStyles = styled.div`
     left: 16px;
     width: 100%;
     height: 1px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: var(--primary);
   }
 `
