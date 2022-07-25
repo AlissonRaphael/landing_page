@@ -21,7 +21,7 @@ export const OfferContainer = styled.div`
   width: 100%;
 
   padding: 7rem 14rem 7rem 14rem;
-  @media (max-width: 768px) { padding: 7rem 4rem 4rem 4rem; } // tablet props
+  @media (max-width: 1024px) { padding: 7rem 4rem 4rem 4rem; } // small desktop props
   @media (max-width: 425px) { padding: 3rem 2rem 3rem 2rem; } // mobile props
 
   display: flex;
@@ -32,7 +32,7 @@ export const OfferContainer = styled.div`
 
 export const Title = styled.h1`
   margin-bottom: 2rem;
-  max-width: 40rem;
+  max-width: 60rem;
   font-size: 2.7rem;
   @media (max-width: 768px) { font-size: 2rem; } // tablet props
   @media (max-width: 425px) { font-size: 1.5rem; } // tablet props
@@ -41,7 +41,6 @@ export const Title = styled.h1`
   font-weight: 400;
 
   text-align: center;
-  @media (max-width: 425px) { text-align: left; } // mobile props
 
   color: var(--white-text);
 
@@ -68,6 +67,7 @@ export const Price = styled.h1`
 
   .discount {
     font-size: 5rem;
+    @media (max-width: 768px) { font-size: 3rem; } // tablet props
     color: var(--primary);
   }
 `

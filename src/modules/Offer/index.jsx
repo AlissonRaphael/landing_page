@@ -5,7 +5,7 @@ export default function Offer () {
   return (
     <Container>
     <OfferContainer>
-      <Title>Obtenha nossa solução com um desconte <span>imperdível</span></Title>
+      <Title>Tenha a solução para seus problemas com um desconte <span>imperdível</span></Title>
       <Price>
         <div className="original">de R$298,00</div>
         <div className="discount">por R$ 97,00</div>
