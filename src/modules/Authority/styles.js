@@ -4,44 +4,70 @@ import Man from '../../assets/man.jpg'
 
 
 export const AutorityContainer = styled.div`
+  margin: 3rem 0;
   max-width: 1440px;
   width: 100%;
 
   padding: 7rem 14rem 7rem 14rem;
-  @media (max-width: 768px) { padding: 7rem 4rem 4rem 4rem; } // tablet props
+  @media (max-width: 1024px) { padding: 4rem 4rem 4rem 4rem; } // small desktop props
   @media (max-width: 425px) { padding: 3rem 2rem 3rem 2rem; } // mobile props
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 
   position: relative;
 
   ::before {
     content: '';
     position: absolute;
-    top: 20%;
+    top: -0%;
     left: 30%;
+    @media (max-width: 768px) { left: 20%; } // tablet props
+
     width: 40%;
-    height: 60%;
+    @media (max-width: 768px) { width: 60%; } // tablet props
+
+    height: 100%;
     z-index: -20;
     background-color: var(--background-side-color);
   }
 `
 
 export const Article = styled.div`
-  margin-top: 16rem;
-  max-width: 30rem;
-  height: 35rem;
+  width: 100%;
+  height: 100%;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  @media (max-width: 768px) { grid-template-columns: 100%; } // tablet props
   align-items: center;
+  justify-content: center;
+
+  .photo {
+    @media (max-width: 768px) { margin: auto; margin-bottom: 3rem; } // tablet props
+
+    min-height: 35rem;
+    @media (max-width: 768px) { min-height: 25rem; } // tablet props
+
+    width: 80%;
+    @media (max-width: 768px) { width: 60%; } // tablet props
+    @media (max-width: 425px) { width: 100%; } // mobile props
+
+    background-image: url(${Man});
+    background-size: cover;
+    background-position: center;
+    border: 4px solid var(--primary);
+  }
+
+  .text {
+    height: 80%;
+    @media (max-width: 768px) { min-height: 25rem; } // tablet props
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const Title = styled.h1`
   margin-bottom: 1.5rem;
+  width: 100%;
   max-width: 40rem;
 
   text-align: center;
@@ -64,16 +90,4 @@ export const Text = styled.div`
 
     @media (max-width: 768px) { font-size: 1rem; } // tablet props
   }
-`
-
-export const Photo = styled.div`
-  margin-right: 4rem;
-  width: 100%;
-  height: 30rem;
-  max-width: 300px;
-
-  border: 4px solid var(--primary);
-  background-image: url(${Man});
-  background-size: cover;
-  background-position: center;
 `
