@@ -9,12 +9,11 @@ export const Container = styled.main`
   align-items: center;
   flex-direction: column;
 
-  position: relative;
-
-  // mobile props
-  @media (max-width: 425px) { height: 100vh; }
+  @media (max-width: 425px) { height: 100vh; } // mobile props
 
   background-image: url(${Background});
+
+  position: relative;
   z-index: 0;
 
   ::after {
@@ -57,8 +56,9 @@ export const SquareBackground = styled.div`
   width: 100%;
 
   height: 45%;
-  @media (max-width: 768px) { height: 50%; } // tablet props
-  @media (max-width: 425px) { height: 60%; } // mobile props
+  @media (max-width: 1024px) { height: 38%; } // tablet props
+  @media (max-width: 768px) { height: 43%; } // tablet props
+  @media (max-width: 425px) { height: 51%; } // mobile props
 
   background-color: var(--background-side-color);
 `
