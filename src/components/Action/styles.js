@@ -5,9 +5,9 @@ export const ActionContainer = styled.div`
   max-width: 1440px;
   width: 100%;
 
-  padding: 2rem 10rem 6rem 10rem;
-  @media (max-width: 768px) { padding: 2rem 4rem; } // tablet props
-  @media (max-width: 425px) { padding: 1rem 2rem; } // mobile props
+  @media (max-width: 1024px) { padding: 2rem 4rem; } // small desktop props
+  @media (max-width: 425px) { padding: 0; } // mobile props
+  padding: ${props => props.isMain ? '2rem 10rem 6rem 10rem' : '0' };
 
   display: flex;
   flex-direction: column;
