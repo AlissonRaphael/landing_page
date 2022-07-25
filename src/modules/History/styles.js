@@ -4,8 +4,8 @@ export const HistoryContainer = styled.div`
   max-width: 1440px;
   width: 100%;
 
-  padding: 7rem 14rem 7rem 14rem;
-  @media (max-width: 768px) { padding: 7rem 4rem 4rem 4rem; } // tablet props
+  padding: 7rem 14rem 4rem 14rem;
+  @media (max-width: 1024px) { padding: 7rem 4rem 4rem 4rem; } // small props
   @media (max-width: 425px) { padding: 3rem 2rem 3rem 2rem; } // mobile props
 
   display: flex;
@@ -36,7 +36,6 @@ export const Title = styled.h1`
   color: var(--white-text);
 `
 
-
 export const Text = styled.div`
   &.start {
     margin: 4rem 0 0 0;
@@ -65,16 +64,16 @@ export const Text = styled.div`
         content: '';
         position: absolute;
         top: -25%;
-        @media (max-width: 768px) { top: -50%; } // tablet props
+        @media (max-width: 768px) { top: -20%; } // tablet props
 
         left: -20%;
-        @media (max-width: 768px) { left: 25%; } // tablet props
+        @media (max-width: 768px) { left: 15%; } // tablet props
 
-        width: 40%;
-        @media (max-width: 768px) { width: 50%; } // tablet props
+        width: 100%;
+        @media (max-width: 768px) { width: 70%; } // tablet props
 
         height: 300%;
-        @media (max-width: 768px) { height: 340%; } // tablet props
+        @media (max-width: 768px) { height: 300%; } // tablet props
         z-index: -20;
 
         background-color: var(--background-side-color);
