@@ -1,14 +1,12 @@
 import styled from 'styled-components'
 
-import Plus from '../../assets/plus.svg'
-
-
 export const PitchContainer = styled.div`
   max-width: 1440px;
   width: 100%;
+  height: 100%;
 
-  padding: 7rem 14rem 7rem 14rem;
-  @media (max-width: 768px) { padding: 7rem 4rem 4rem 4rem; } // tablet props
+  padding: 4rem 14rem 4rem 14rem;
+  @media (max-width: 1024px) { padding: 4rem 4rem 4rem 4rem; } // small desktop props
   @media (max-width: 425px) { padding: 3rem 2rem 3rem 2rem; } // mobile props
 
   display: flex;
@@ -21,6 +19,7 @@ export const PitchContainer = styled.div`
 
 export const Title = styled.h1`
   margin-bottom: 1.5rem;
+  width: 100%;
   max-width: 40rem;
   text-align: center;
   align-self: center;
@@ -33,7 +32,8 @@ export const Title = styled.h1`
 `
 
 export const Text = styled.div`
-  max-width: 60%;
+  width: 100%;
+  max-width: 40rem;
   align-self: center;
 
   p {
@@ -48,17 +48,34 @@ export const Text = styled.div`
 `
 
 export const Cards = styled.ul`
+  padding: 0;
   display: grid;
-  grid-template-columns: 48% 48%;
-  gap: 4%;
+
+  grid-template-columns: 50% 50%;
+  @media (max-width: 768px) { grid-template-columns: 100%; } // tablet desktop
 `
 
 export const Card = styled.li`
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  &:nth-child(2n+1) { margin-right: 0.75rem; }
+  &:nth-child(2n+2) { margin-left: 0.75rem; }
+
+   // tablet props
+  @media (max-width: 768px) {
+    margin-bottom: 1.5rem;
+    &:nth-child(2n+1) { margin-right: 0; }
+    &:nth-child(2n+2) { margin-left: 0; }
+  }
+
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   border-radius: 0.4rem;
-  padding: 2.5rem;
-  display: flex;
+  padding: 10%;
+  @media (max-width: 768px) { padding: 5%; } // tablet props
+  @media (max-width: 425px) { padding: 10%; } // mobile props
+
+  display: grid;
+  grid-template-columns: 25% 65%;
+  gap: 10%;
   align-items: center;
 
   background-color: var(--background-side-color);
@@ -67,8 +84,9 @@ export const Card = styled.li`
   .plus {
     position: absolute;
     top: -5px;
-    right: 15px;
+    right: 5%;
     height: 20px;
+    width: 20px;
 
     margin: 0;
     padding: 0;
@@ -110,12 +128,12 @@ export const Card = styled.li`
   }
 
   img {
-    height: 4.5rem;
-    padding-right: 2rem;
+    width: 100%;
     opacity: 0.7;
   }
 
   div {
+    width: 100%;
     display: flex;
     flex-direction: column;
 
