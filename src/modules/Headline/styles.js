@@ -9,7 +9,7 @@ export const HeadlineContainer = styled.div`
   width: 100%;
 
   padding: 8rem 14rem;
-  @media (max-width: 768px) { padding: 4rem 3rem; } // tablet props
+  @media (max-width: 1024px) { padding: 4rem 3rem; } // small desktop props
   @media (max-width: 425px) { padding: 3rem 2rem; } // mobile props
 
   display: flex;
