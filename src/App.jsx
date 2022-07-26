@@ -5,6 +5,7 @@ import Main from './components/Main'
 import Action from './components/Action'
 import Page from './components/Page'
 import { ContainerLineDetail } from './components/Detail'
+import Footer from './components/Footer'
 
 import Headline from './modules/Headline'
 import VSL from './modules/VSL'
@@ -14,9 +15,9 @@ import History from './modules/History'
 import Pitch from './modules/Pitch'
 import Authority from './modules/Authority'
 import Depositions from './modules/Depositions'
-
 import Offer from './modules/Offer'
 import Guarantee from './modules/Guarantee'
+import FAQ from './modules/FAQ'
 
 export default function App () {
   return (
@@ -44,6 +45,12 @@ export default function App () {
 
       <Offer/>
       <Guarantee/>
+
+      <Page>
+        <FAQ/>
+      </Page>
+
+      <Footer/>
 
       <GlobalStyle/>
     </>
