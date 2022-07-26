@@ -33,7 +33,10 @@ export const HeaderStyle = styled.div`
 `
 
 export const Links = styled.nav`
-  ul { display: flex; }
+  ul {
+    display: flex;
+    margin-bottom: 0;
+  }
 
   li {
     list-style: none;

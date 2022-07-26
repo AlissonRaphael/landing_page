@@ -34,7 +34,7 @@ function Nav () {
         </ul>
       </Links>}
 
-      {menu=== 'burger' &&
+      {menu === 'burger' &&
       <Burger  className={active ? 'active' : ''} onTouchStart={() => setActive(!active)} >
         <div></div>
         <div></div>
