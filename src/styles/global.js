@@ -39,6 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: var(--background-main-color);
     color: var(--gray-600-text);
+    position: relative;
   }
 
   body, input, textarea, button {
@@ -50,7 +51,22 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
   }
 
+  nav, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
   button {
     cursor: pointer;
+  }
+
+  .modal .modal-dialog .modal-content {
+    background-color: var(--background-side-color);
+
+    .modal-body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 `

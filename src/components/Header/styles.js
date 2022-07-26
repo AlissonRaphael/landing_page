@@ -4,7 +4,7 @@ export const HeaderContainer = styled.header`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
 
   border-bottom: 1px solid var(--background-card-color);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 14px 28px;
@@ -35,13 +35,14 @@ export const HeaderStyle = styled.div`
 export const Links = styled.nav`
   ul {
     display: flex;
+    flex-direction: ${props => props.column ? 'column' : 'row'};
     margin-bottom: 0;
   }
 
   li {
     list-style: none;
 
-    margin-left: 1rem;
+    margin-left: ${props => props.column ? 0 : '1rem'};;
     :first-child { margin-left: 0rem; }
   }
 
@@ -60,6 +61,7 @@ export const Links = styled.nav`
 export const Burger = styled.div`
   height: 16px;
   width: 20px;
+  z-index: 100;
 
   div {
     width: 20px;
