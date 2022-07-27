@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 import { GlobalStyle } from './styles/global'
 
 import Header from './components/Header'
@@ -19,7 +21,23 @@ import Offer from './modules/Offer'
 import Guarantee from './modules/Guarantee'
 import FAQ from './modules/FAQ'
 
+import configuration from '../configuration.json'
+
+const HAS_DELAY = configuration.geral.landing_page.hasDelay
+const DELAY = configuration.geral.landing_page.delay
+
 export default function App () {
+  const [showPage, setShowPage] = useState(false)
+
+  useEffect(() => {
+    if (!HAS_DELAY)
+      setShowPage(true)
+  }, [])
+
+  setInterval(() => {
+    setShowPage(true)
+  },DELAY*1000)
+
   return (
     <>
       <Header/>
@@ -31,26 +49,31 @@ export default function App () {
         <Action isMain={true}/>
       </Main>
 
-      <Page>
-        <ContainerLineDetail/>
-        <Lead/>
-        <History/>
-        <Pitch/>
-      </Page>
+      { showPage ?
+        <>
+          <Page>
+            <ContainerLineDetail/>
+            <Lead/>
+            <History/>
+            <Pitch/>
+          </Page>
 
-      <Page>
-        <Authority/>
-        <Depositions/>
-      </Page>
+          <Page>
+            <Authority/>
+            <Depositions/>
+          </Page>
 
-      <Offer/>
-      <Guarantee/>
+          <Offer/>
+          <Guarantee/>
 
-      <Page>
-        <FAQ/>
-      </Page>
+          <Page>
+            <FAQ/>
+          </Page>
 
-      <Footer/>
+          <Footer/>
+        </> :
+        null
+      }
 
       <GlobalStyle/>
     </>
