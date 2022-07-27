@@ -53,6 +53,8 @@ export const Button = styled.a`
     background-image: url(${Pattern});
     background-size: 30px;
     background-position: 0%;
+    color: var(--white-text);
+
 
     animation: PATTERN_ANIMATION 10s linear infinite;
 

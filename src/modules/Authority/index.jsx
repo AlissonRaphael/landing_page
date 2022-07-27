@@ -1,6 +1,8 @@
 import { AutorityContainer, Title, Text, Article } from './styles'
 import { VerticalLineDetail } from '../../components/Detail'
 
+import parser from '../../helpers/parser'
+import configuration from '../../../configuration.json'
 
 export default function Autority () {
   return (
@@ -8,15 +10,9 @@ export default function Autority () {
       <Article>
         <div className="photo"/>
         <div className="text">
-          <Title>Antes de mais nada, preciso me apresentar...</Title>
+          <Title>{parser(configuration.page_sections.autority.title)}</Title>
           <Text>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste, rem dolore in, eius quis nemo?
-            </p>
-            <p>
-              Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste.
-            </p>
+            { configuration.page_sections.autority.texts.map(text => <p>{text}</p> ) }
           </Text>
           <VerticalLineDetail/>
         </div>

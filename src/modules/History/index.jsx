@@ -2,37 +2,27 @@ import ArrowRight from '../../assets/arrow_right.svg'
 import { HistoryContainer, Title, Article, LineContainer, Text, Links } from './styles'
 import { HorizontalLineDetail } from '../../components/Detail'
 
+import parser from '../../helpers/parser'
+import configuration from '../../../configuration.json'
 
 export default function History () {
   return (
     <HistoryContainer>
-      <Title>Na verdade, o que você precisa saber é que...</Title>
+      <Title>{parser(configuration.page_sections.history.title)}</Title>
       <Article>
         <Text className='end'>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate
-          </p>
-          <p>
-            Quo modi cum repudiandae, autem assumenda earum, dolorem iusto nemo veritatis excepturi fugit.
-            Possimus soluta atque aspernatur obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </p>
+          { configuration.page_sections.history.texts1.map(text => <p>{text}</p>) }
         </Text>
         <LineContainer>
           <HorizontalLineDetail/>
         </LineContainer>
         <Text className='start'>
-          <p>
-            Minus itaque exercitationem aut ullam, accusantium reprehenderit veniam consectetur perspiciatis at unde sit architecto nisi! Nemo voluptatibus repudiandae cum accusantium! Fuga, sequi.
-          </p>
-          <p>
-            Labore veritatis delectus numquam illum ullam voluptatibus obcaecati pariatur deserunt harum? Sed, architecto corporis rem natus ipsam accusamus at necessitatibus provident iure.
-          </p>
+          { configuration.page_sections.history.texts2.map(text => <p>{text}</p>) }
           <Links>
             <ul>
               <li>
-                <a className="primary" href="">
-                  <span>Tenha acesso</span> 
+                <a className="primary" href={configuration.page_sections.history.link.url}>
+                  <span>{configuration.page_sections.history.link.label}</span> 
                   <img src={ArrowRight}/>
                 </a>
                 </li>

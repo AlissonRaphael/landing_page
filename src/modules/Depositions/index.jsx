@@ -13,63 +13,22 @@ import Avatar6 from '../../assets/avatar/avatar6.jpg'
 import Avatar7 from '../../assets/avatar/avatar7.jpg'
 import Avatar8 from '../../assets/avatar/avatar8.jpg'
 
+const avatars = {
+  "Avatar1": Avatar1,
+  "Avatar2": Avatar2,
+  "Avatar3": Avatar3,
+  "Avatar4": Avatar4,
+  "Avatar5": Avatar5,
+  "Avatar6": Avatar6,
+  "Avatar7": Avatar7,
+  "Avatar8": Avatar8
+}
 
-const data = [
-  {
-    deposition: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.',
-    avatar: Avatar1,
-    name: 'Lorem ipsum',
-    bio: 'Quia vitae inventore quod'
-  },
-  {
-    deposition: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.',
-    avatar: Avatar2,
-    name: 'Lorem ipsum',
-    bio: 'Similique ipsam'
-  },
-  {
-    deposition: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.',
-    avatar: Avatar3,
-    name: 'Lorem ipsum',
-    bio: 'Doloribus voluptas'
-  },
-  {
-    deposition: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.',
-    avatar: Avatar4,
-    name: 'Lorem ipsum',
-    bio: 'Similique ipsam'
-  },
-  {
-    deposition: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.',
-    avatar: Avatar5,
-    name: 'Lorem ipsum',
-    bio: 'Ipsam nobis culpa'
-  },
-  {
-    deposition: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.',
-    avatar: Avatar6,
-    name: 'Lorem ipsum',
-    bio: 'Praesentium similique'
-  },
-  {
-    deposition: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.',
-    avatar: Avatar7,
-    name: 'Lorem ipsum',
-    bio: 'Laboriosam minima magni'
-  },
-  {
-    deposition: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.',
-    avatar: Avatar8,
-    name: 'Lorem ipsum',
-    bio: 'Quia vitae inventore'
-  },
-  {
-    deposition: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.',
-    avatar: Avatar8,
-    name: 'Lorem ipsum',
-    bio: 'Dicta nisi labore'
-  },
-]
+import parser from '../../helpers/parser'
+import configuration from '../../../configuration.json'
+
+const data = configuration.page_sections.depositions.content
+
 
 export default function Depositions () {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -94,7 +53,7 @@ export default function Depositions () {
 
   return (
     <DepositionsContainer>
-      <Title>Veja as palavras de quem já tem resultados</Title>
+      <Title>{parser(configuration.page_sections.depositions.title)}</Title>
       <Carousel activeIndex={activeIndex} next={next} previous={previous} enableTouch={true} ride="carousel" pause="hover">
         <CarouselIndicators items={data} activeIndex={activeIndex} onClickHandler={goToIndex} />
         {
@@ -109,7 +68,7 @@ export default function Depositions () {
                 <i className="vertical"></i>
                 <div className="deposition">{deposition}</div>
                 <div className="perfil">
-                  <img className="avatar" src={avatar}/>
+                  <img className="avatar" src={avatars[avatar]}/>
                   <div>
                     <h3>{name}</h3>
                     <p>{bio}</p>

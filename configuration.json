@@ -1,0 +1,204 @@
+{
+  "geral": {
+
+    "vsl": {
+      "url": "https://agencymkt2a.wistia.com/medias/t42ibex20d",
+      "perview": "local"
+    },
+
+    "button_action": {
+      "label": "Sim, desejo obter",
+      "link": "https://www.google.com.br/webhp?hl=pt-BR",
+      "hasDelay": true,
+      "delay": 1
+    },
+
+    "landing_page": {
+      "hasDelay": false,
+      "delay": 5
+    }
+  },
+
+
+  "page_sections": {
+    "headline": {
+      "title": "Lorem ipsum dolor, <span>sit amet consectetur</span> elit. Blanditiis modi quas magni. Harum excepturi impedit",
+      "subtitle": "Dolorem ea quis cupiditate non obcaecati dolor eos blanditiis veritatis delectus impedit hic possimus quisquam perspiciatis iusto deleniti, dolores sed reiciendis numquam."
+    },
+
+    "sub_headline": "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis modi quas magni. Harum excepturi impedit natus dolorum</p>",
+
+    "lead": {
+      "title": "Antes de tudo, precisamos ser sinceros neste momento",
+      "texts": [
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste, rem dolore in, eius quis nemo?",
+        "Possimus soluta atque aspernatur obcaecati! Ipsum dolor sit amet.",
+        "Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste."
+      ]
+    },
+
+    "history": {
+      "title": "Na verdade, o que você precisa saber é que...",
+      "texts1": [
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate",
+        "Quo modi cum repudiandae, autem assumenda earum, dolorem iusto nemo veritatis excepturi fugit. Possimus soluta atque aspernatur obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      ],
+      "texts2": [
+        "Minus itaque exercitationem aut ullam, accusantium reprehenderit veniam consectetur perspiciatis at unde sit architecto nisi! Nemo voluptatibus repudiandae cum accusantium! Fuga, sequi.",
+        "Labore veritatis delectus numquam illum ullam voluptatibus obcaecati pariatur deserunt harum? Sed, architecto corporis rem natus ipsam accusamus at necessitatibus provident iure."
+      ],
+      "link": { "label": "Tenha acesso", "url": "" }
+    },
+
+
+    "pitch": {
+      "title": "Através dessa solução, você poderá...",
+      "subtitle": "Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste",
+      "content" : [
+        {
+          "title": "Lorem ipsum",
+          "icon": "Icon1",
+          "color": "#25D366",
+          "plus": "tru",
+          "description": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        },
+        {
+          "title": "Ipsum dolor",
+          "icon": "Icon2",
+          "color": "#E4405F",
+          "description": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        },
+        {
+          "title": "Ipsum dolor",
+          "icon": "Icon3",
+          "color": "#1877F2",
+          "description": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        },
+        {
+          "title": "Ipsum dolor",
+          "icon": "Icon4",
+          "color": "#FF0000",
+          "plus": "tru",
+          "description": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        },
+        {
+          "title": "Ipsum dolor",
+          "icon": "Icon5",
+          "color": "#4285F4",
+          "description": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        },
+        {
+          "title": "Ipsum dolor",
+          "icon": "Icon6",
+          "color": "#00B2FF",
+          "plus": "tru",
+          "description": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        }
+      ]
+    },
+
+    "autority": {
+      "title": "Antes de mais nada, preciso me apresentar...",
+      "texts": [
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste, rem dolore in, eius quis nemo?",
+        "Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste."
+      ]
+    },
+
+    "depositions": {
+      "title": "Através dessa solução, você poderá...",
+      "content": [
+        {
+          "deposition": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.",
+          "avatar": "Avatar1",
+          "name": "Lorem ipsum",
+          "bio": "Quia vitae inventore quod"
+        },
+        {
+          "deposition": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.",
+          "avatar": "Avatar2",
+          "name": "Lorem ipsum",
+          "bio": "Similique ipsam"
+        },
+        {
+          "deposition": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.",
+          "avatar": "Avatar3",
+          "name": "Lorem ipsum",
+          "bio": "Doloribus voluptas"
+        },
+        {
+          "deposition": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.",
+          "avatar": "Avatar4",
+          "name": "Lorem ipsum",
+          "bio": "Similique ipsam"
+        },
+        {
+          "deposition": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.",
+          "avatar": "Avatar5",
+          "name": "Lorem ipsum",
+          "bio": "Ipsam nobis culpa"
+        },
+        {
+          "deposition": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.",
+          "avatar": "Avatar6",
+          "name": "Lorem ipsum",
+          "bio": "Praesentium similique"
+        },
+        {
+          "deposition": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.",
+          "avatar": "Avatar7",
+          "name": "Lorem ipsum",
+          "bio": "Laboriosam minima magni"
+        },
+        {
+          "deposition": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.",
+          "avatar": "Avatar8",
+          "name": "Lorem ipsum",
+          "bio": "Quia vitae inventore"
+        },
+        {
+          "deposition": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.",
+          "avatar": "Avatar8",
+          "name": "Lorem ipsum",
+          "bio": "Dicta nisi labore"
+        }
+      ]
+    },
+
+    "offer": {
+      "title": "Tenha a solução para seus problemas com um desconte <span>imperdível</span>",
+      "original_price": "de R$298,00",
+      "price_with_discount": "por R$ 97,00"
+    },
+
+    "faq": {
+      "title": "Perguntas e respostas",
+      "content": [
+        {
+          "question": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae",
+          "response": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        },
+        {
+          "question": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae",
+          "response": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        },
+        {
+          "question": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae",
+          "response": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        },
+        {
+          "question": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae",
+          "response": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        },
+        {
+          "question": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae",
+          "response": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        },
+        {
+          "question": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae",
+          "response": "Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est"
+        }
+      ]
+    }
+  }
+}

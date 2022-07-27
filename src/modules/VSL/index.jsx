@@ -6,8 +6,10 @@ import PreviewFile from '../../assets/video/preview.gif'
 import Volume from './SVG'
 import { VSLContainer, Player, ProgressionBar } from './styles'
 
+import configuration from '../../../configuration.json'
 
-const URL = process.env.URL_VIDEO
+
+const URL = configuration.geral.vsl.url
 const PLAYERS_CONFIG = {
   youtube: {
     playerVars: {

@@ -1,43 +1,18 @@
 import { FAQContainer, Grid, Title } from './styles'
 import { UncontrolledAccordion, AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap'
 
-const data = [
-  {
-    question: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae',
-    response: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  },
-  {
-    question: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae',
-    response: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  },
-  {
-    question: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae',
-    response: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  },
-  {
-    question: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae',
-    response: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  },
-  {
-    question: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae',
-    response: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  },
-  {
-    question: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae',
-    response: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  }
-]
-
+import parser from '../../helpers/parser'
+import configuration from '../../../configuration.json'
 
 export default function FAQ () {
   return (
     <FAQContainer>
-      <Title>Perguntas e respostas</Title>
+      <Title>{parser(configuration.page_sections.faq.title)}</Title>
       <Grid>
         <UncontrolledAccordion defaultOpen="1">
           {
-            data.map(({ question, response }, index) => (
-              <AccordionItem>
+            configuration.page_sections.faq.content.map(({ question, response }, index) => (
+              <AccordionItem key={index}>
                 <AccordionHeader targetId={index}>
                   {question}
                 </AccordionHeader>

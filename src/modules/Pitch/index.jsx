@@ -5,71 +5,42 @@ import Icon4 from '../../assets/product/icon4.svg'
 import Icon5 from '../../assets/product/icon5.svg'
 import Icon6 from '../../assets/product/icon6.svg'
 
+const icons = {
+  "Icon1": Icon1,
+  "Icon2": Icon2,
+  "Icon3": Icon3,
+  "Icon4": Icon4,
+  "Icon5": Icon5,
+  "Icon6": Icon6,
+}
+
 import { PitchContainer, Title, Text, Cards, Card } from './styles'
 import Plus from '../../assets/plus.svg'
 
-const data = [
-  {
-    title: 'Lorem ipsum',
-    icon: Icon1,
-    color: '#25D366',
-    plus: true,
-    description: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  },
-  {
-    title: 'Ipsum dolor',
-    icon: Icon2,
-    color: '#E4405F',
-    description: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  },
-  {
-    title: 'Ipsum dolor',
-    icon: Icon3,
-    color: '#1877F2',
-    description: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  },
-  {
-    title: 'Ipsum dolor',
-    icon: Icon4,
-    color: '#FF0000',
-    plus: true,
-    description: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  },
-  {
-    title: 'Ipsum dolor',
-    icon: Icon5,
-    color: '#4285F4',
-    description: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  },
-  {
-    title: 'Ipsum dolor',
-    icon: Icon6,
-    color: '#00B2FF',
-    plus: true,
-    description: 'Praesentium similique ipsam nobis culpa voluptatum perspiciatis quia vitae inventore quod, laboriosam minima magni corporis, dicta nisi labore doloribus voluptas amet est.'
-  }
-]
+import parser from '../../helpers/parser'
+import configuration from '../../../configuration.json'
+
 
 export default function Pitch () {
   return (
     <PitchContainer>
-      <Title>Através dessa solução, você poderá...</Title>
+      <Title>{parser(configuration.page_sections.pitch.title)}</Title>
 
       <Text>
         <p>
-          Reprehenderit distinctio consequuntur deleniti vero commodi quas facere ipsum dicta ad cupiditate voluptate quidem quasi iste
+          {parser(configuration.page_sections.pitch.subtitle)}
         </p>
       </Text>
 
       <Cards>
         {
-          data.map(({ title, icon, color, plus, description }, index) => (
-            <Card color={color}>
+          configuration.page_sections.pitch.content.map(({ title, icon, color, plus, description }, index) => (
+            <Card color={color} key={index}>
               { plus ? <img className="plus" src={Plus}/> : null }
               <i className="ball"></i>
               <i className="vertical"></i>
               <i className="horizontal"></i>
-              <img src={icon}/>
+              <img src={icons[icon]}/>
               <div>
                 <h3><span>{title}</span><div className="detail"></div></h3>
                 <div>{description}</div>

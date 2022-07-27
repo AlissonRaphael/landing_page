@@ -28,12 +28,12 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
 
-    -webkit-touch-callout: none;
+    /* -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none; 
-    user-select: none;
+    user-select: none; */
   }
 
   body {

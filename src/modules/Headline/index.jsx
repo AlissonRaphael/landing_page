@@ -1,14 +1,16 @@
 import { HeadlineContainer, TitleStyle, SubTitleStyle } from './styles'
 
+import parser from '../../helpers/parser'
+import configuration from '../../../configuration.json'
 
 export default function Headline () {
   return (
     <HeadlineContainer>
       <TitleStyle>
-        Lorem ipsum dolor, <span>sit amet consectetur</span> elit. Blanditiis modi quas magni. Harum excepturi impedit
+        {parser(configuration.page_sections.headline.title)}
       </TitleStyle>
       <SubTitleStyle>
-        Dolorem ea quis cupiditate non obcaecati dolor eos blanditiis veritatis delectus impedit hic possimus quisquam perspiciatis iusto deleniti, dolores sed reiciendis numquam.
+        {configuration.page_sections.headline.subtitle}
       </SubTitleStyle>
     </HeadlineContainer>
   )

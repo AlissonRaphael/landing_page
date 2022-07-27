@@ -1,11 +1,12 @@
 import { SubHeadlineStyle } from './styles'
 
+import parser from '../../helpers/parser'
+import configuration from '../../../configuration.json'
+
 export default function Headline () {
   return (
     <SubHeadlineStyle>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis modi quas magni. Harum excepturi impedit natus dolorum
-      </p>
+      {parser(configuration.page_sections.sub_headline)}
     </SubHeadlineStyle>
   )
 }
