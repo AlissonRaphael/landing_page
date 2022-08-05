@@ -9,6 +9,9 @@ import { VSLContainer, Player, ProgressionBar } from './styles'
 import configuration from '../../../configuration.json'
 
 
+const HAS_DELAY = configuration.geral.landing_page.hasDelay
+const DELAY = configuration.geral.landing_page.delay
+
 const URL = configuration.geral.vsl.url
 const PLAYERS_CONFIG = {
   youtube: {
@@ -40,7 +43,7 @@ const PLAYERS_CONFIG = {
   }
 }
 
-export default function VSL () {
+export default function VSL ({ handleProgressVideo }) {
   const [init, setInit] = useState(false)
   const [play, setPlay] = useState(false)
   const [interaction, setInteraction] = useState('Click')
@@ -81,18 +84,31 @@ export default function VSL () {
         <Film/>
         { !init ? <Preview/> : null }
         { !play ? <AudioButton/> : null }
-        <Video play={play}/>
+        <Video play={play} handleProgressVideo={handleProgressVideo}/>
       </Player>
     </VSLContainer>
   )
 }
 
-function Video ({ play }) {
+function Video ({ play, handleProgressVideo }) {
   const [duration, setDuration] = useState(0)
 
+  const setProgressTime = (time) => {
+    if (HAS_DELAY && DELAY <= time)
+      handleProgressVideo(true)
+  }
+
   return <>
-    <ReactPlayer className='video' height={0} width={0} url={URL} playing={play}
-      onDuration={(time) => setDuration(time)} config={PLAYERS_CONFIG}/>
+    <ReactPlayer
+      className='video'
+      height={0}
+      width={0}
+      url={URL}
+      playing={play}
+      onDuration={(time) => setDuration(time)}
+      onProgress={(data) => setProgressTime(data.playedSeconds)}
+      config={PLAYERS_CONFIG}
+    />
     <ProgressionBar duration={duration} isPlay={play}/>
   </>
 }

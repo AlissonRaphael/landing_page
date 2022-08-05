@@ -8,17 +8,7 @@ import configuration from '../../../configuration.json'
 const HAS_DELAY = configuration.geral.button_action.hasDelay
 const DELAY = configuration.geral.button_action.delay
 
-export default function Action ({ isMain }) {
-  const [showButton, setShowButton] = useState(false)
-
-  useEffect(() => {
-    if (!isMain || !HAS_DELAY)
-      setShowButton(true)
-  }, [])
-
-  setInterval(() => {
-    setShowButton(true)
-  },DELAY*1000)
+export default function Action ({ isMain, showButton }) {
 
   return (
     <ActionContainer isMain={isMain}>

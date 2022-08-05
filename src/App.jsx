@@ -23,20 +23,17 @@ import FAQ from './modules/FAQ'
 
 import configuration from '../configuration.json'
 
-const HAS_DELAY = configuration.geral.landing_page.hasDelay
-const DELAY = configuration.geral.landing_page.delay
+const HAS_PAGE_DELAY = configuration.geral.landing_page.hasDelay
+const PAGE_DELAY = configuration.geral.landing_page.delay
 
 export default function App () {
+  const [showButton, setShowButton] = useState(false)
   const [showPage, setShowPage] = useState(false)
 
   useEffect(() => {
-    if (!HAS_DELAY)
+    if (!HAS_PAGE_DELAY)
       setShowPage(true)
   }, [])
-
-  setInterval(() => {
-    setShowPage(true)
-  },DELAY*1000)
 
   return (
     <>
@@ -44,9 +41,9 @@ export default function App () {
 
       <Main>
         <Headline/>
-        <VSL/>
+        <VSL setShow={setShowButton, setShowPage}/>
         <SubHeadline/>
-        <Action isMain={true}/>
+        <Action isMain={true} showButton={showButton}/>
       </Main>
 
       { showPage ?
