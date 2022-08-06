@@ -1,39 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import { GlobalStyle } from './styles/global'
 
 import Header from './components/Header'
 import Main from './components/Main'
 import Action from './components/Action'
-import Page from './components/Page'
-import { ContainerLineDetail } from './components/Detail'
-import Footer from './components/Footer'
+import LandingPage from './components/LandingPage'
 
 import Headline from './modules/Headline'
 import VSL from './modules/VSL'
 import SubHeadline from './modules/SubHeadline'
-import Lead from './modules/Lead'
-import History from './modules/History'
-import Pitch from './modules/Pitch'
-import Authority from './modules/Authority'
-import Depositions from './modules/Depositions'
-import Offer from './modules/Offer'
-import Guarantee from './modules/Guarantee'
-import FAQ from './modules/FAQ'
 
-import configuration from '../configuration.json'
-
-const HAS_PAGE_DELAY = configuration.geral.landing_page.hasDelay
-const PAGE_DELAY = configuration.geral.landing_page.delay
 
 export default function App () {
   const [showButton, setShowButton] = useState(false)
   const [showPage, setShowPage] = useState(false)
-
-  useEffect(() => {
-    if (!HAS_PAGE_DELAY)
-      setShowPage(true)
-  }, [])
 
   return (
     <>
@@ -41,36 +22,12 @@ export default function App () {
 
       <Main>
         <Headline/>
-        <VSL setShow={setShowButton, setShowPage}/>
+        <VSL setShowButton={setShowButton} setShowPage={setShowPage} />
         <SubHeadline/>
         <Action isMain={true} showButton={showButton}/>
       </Main>
 
-      { showPage ?
-        <>
-          <Page>
-            <ContainerLineDetail/>
-            <Lead/>
-            <History/>
-            <Pitch/>
-          </Page>
-
-          <Page>
-            <Authority/>
-            <Depositions/>
-          </Page>
-
-          <Offer/>
-          <Guarantee/>
-
-          <Page>
-            <FAQ/>
-          </Page>
-
-          <Footer/>
-        </> :
-        null
-      }
+      <LandingPage showPage={showPage}/>
 
       <GlobalStyle/>
     </>
