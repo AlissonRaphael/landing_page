@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
 
-import PreviewFile from '../../assets/video/preview.gif'
-
-import Volume from './SVG'
 import { VSLContainer, Player, ProgressionBar } from './styles'
+
+import PreviewFile from '../../assets/video/preview.gif'
+import Volume from './SVG'
 
 import configuration from '../../../configuration.json'
 
-
-const HAS_DELAY = configuration.geral.landing_page.hasDelay
-const DELAY = configuration.geral.landing_page.delay
+const HAS_BUTTON_DELAY = configuration.geral.button_action.hasDelay
+const BUTTON_DELAY = configuration.geral.button_action.delay
+const HAS_PAGE_DELAY = configuration.geral.landing_page.hasDelay
+const PAGE_DELAY = configuration.geral.landing_page.delay
 
 const URL = configuration.geral.vsl.url
 const PLAYERS_CONFIG = {
@@ -43,7 +44,7 @@ const PLAYERS_CONFIG = {
   }
 }
 
-export default function VSL ({ handleProgressVideo }) {
+export default function VSL ({ setShowButton, setShowPage }) {
   const [init, setInit] = useState(false)
   const [play, setPlay] = useState(false)
   const [interaction, setInteraction] = useState('Click')
@@ -84,18 +85,29 @@ export default function VSL ({ handleProgressVideo }) {
         <Film/>
         { !init ? <Preview/> : null }
         { !play ? <AudioButton/> : null }
-        <Video play={play} handleProgressVideo={handleProgressVideo}/>
+        <Video play={play} setShowButton={setShowButton} setShowPage={setShowPage}/>
       </Player>
     </VSLContainer>
   )
 }
 
-function Video ({ play, handleProgressVideo }) {
+function Video ({ play, setShowButton, setShowPage }) {
   const [duration, setDuration] = useState(0)
 
-  const setProgressTime = (time) => {
-    if (HAS_DELAY && DELAY <= time)
-      handleProgressVideo(true)
+  useEffect(() => {
+    if (!HAS_BUTTON_DELAY)
+      setShowButton(true)
+
+    if (!HAS_PAGE_DELAY)
+      setShowPage(true)
+  }, [])
+
+  const handleShowControl = (time) => {
+    if (HAS_BUTTON_DELAY && BUTTON_DELAY <= time)
+      setShowButton(true)
+
+    if (HAS_PAGE_DELAY && PAGE_DELAY <= time)
+      setShowPage(true)
   }
 
   return <>
@@ -106,7 +118,7 @@ function Video ({ play, handleProgressVideo }) {
       url={URL}
       playing={play}
       onDuration={(time) => setDuration(time)}
-      onProgress={(data) => setProgressTime(data.playedSeconds)}
+      onProgress={(data) => handleShowControl(data.playedSeconds)}
       config={PLAYERS_CONFIG}
     />
     <ProgressionBar duration={duration} isPlay={play}/>
