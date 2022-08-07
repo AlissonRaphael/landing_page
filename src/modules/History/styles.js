@@ -122,7 +122,7 @@ export const Links = styled.nav`
       margin-right: 0.5rem;
     }
 
-    img {
+    svg {
       height: 1rem;
     }
 
@@ -132,7 +132,7 @@ export const Links = styled.nav`
         margin-right: 1rem;
       }
 
-      img {
+      svg {
         height: 1rem;
       }
     }

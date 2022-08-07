@@ -1,6 +1,6 @@
-import ArrowRight from '../../assets/arrow_right.svg'
 import { HistoryContainer, Title, Article, LineContainer, Text, Links } from './styles'
 import { HorizontalLineDetail } from '../../components/Detail'
+import ArrowRightSVG from '../../components/SVGs/ArrowRigth'
 
 import parser from '../../helpers/parser'
 import configuration from '../../../configuration.json'
@@ -23,7 +23,7 @@ export default function History () {
               <li>
                 <a className="primary" href={configuration.page_sections.history.link.url}>
                   <span>{configuration.page_sections.history.link.label}</span> 
-                  <img src={ArrowRight}/>
+                  <ArrowRightSVG/>
                 </a>
                 </li>
             </ul>
