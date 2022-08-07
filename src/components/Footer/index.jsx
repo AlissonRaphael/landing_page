@@ -1,4 +1,5 @@
 import { ContainerStyle, FooterStyle } from './styles'
+import Menu from '../Header/Menu'
 import Logo from '../../assets/logo.png'
 
 export default function Footer () {
@@ -23,6 +24,7 @@ export default function Footer () {
           <p>
             Todas e quaisquer declarações prospectivas contidas neste site ou em qualquer um de nossos produtos destinam-se a expressar a nossa opinião sobre os resultados potenciais que algumas pessoas podem alcançar.
           </p>
+          <Menu/>
         </div>
       </FooterStyle>
     </ContainerStyle>
