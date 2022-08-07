@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Carousel, CarouselItem, CarouselControl, CarouselIndicators } from 'reactstrap'
 
-import { DepositionsContainer, Title, Grid, Deposition } from './styles'
-import Quotes from '../../assets/quotes.svg'
+import { DepositionsContainer, Title, Deposition } from './styles'
+import QuotesSVG from '../../components/SVGs/Quotes'
 
 import Avatar1 from '../../assets/avatar/avatar1.jpg'
 import Avatar2 from '../../assets/avatar/avatar2.jpg'
@@ -64,7 +64,7 @@ export default function Depositions () {
               key={index}
             >
               <Deposition>
-                <img className="quotes" src={Quotes}/>
+                <QuotesSVG className="quotes"/>
                 <i className="vertical"></i>
                 <div className="deposition">{deposition}</div>
                 <div className="perfil">

@@ -106,11 +106,12 @@ export const Deposition = styled.div`
     }
   }
 
-  .quotes {
+  svg {
     position: absolute;
     top: -25px;
     left: 15px;
     height: 50px;
+    width: 50px;
 
     margin: 0;
     padding: 0;
