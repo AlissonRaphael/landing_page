@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
+import colors from '../../colors.json'
+
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
@@ -16,10 +18,10 @@ export const GlobalStyle = createGlobalStyle`
     --gray-200-text: #313b47;
     --gray-100-text: #1b2126;
 
-    --primary: #f3ad33;
+    --primary: ${colors.primary};
     --secondary: #2A323C;
 
-    --primary-darken: #e7a430;
+    --primary-darken: ${colors.primary_darken};
   }
 
   * {
