@@ -45,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
     -moz-user-select: none;
     -ms-user-select: none; 
     user-select: none; */
+
   }
 
   body {
@@ -69,6 +70,48 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-dark);
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: var(--primary-light);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background-main);
+    border: 0px none #ffffff;
+    border-radius: 35px;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+    background: var(--background-card-light);
+  }
+
+  ::-webkit-scrollbar-track:active {
+    background: var(--background-card);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
   }
 
   .modal .modal-dialog .modal-content {
