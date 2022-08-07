@@ -26,7 +26,7 @@ export const AutorityContainer = styled.div`
 
     height: 100%;
     z-index: -20;
-    background-color: var(--background-side-color);
+    background-color: var(--background-card-light);
   }
 `
 
@@ -77,7 +77,7 @@ export const Title = styled.h1`
   @media (max-width: 768px) { font-size: 1.8rem; } // tablet props
   @media (max-width: 425px) { font-size: 1.5rem; } // mobile props
 
-  color: var(--white-text);
+  color: var(--text-main);
 `
 
 export const Text = styled.div`
@@ -85,7 +85,7 @@ export const Text = styled.div`
     font-size: 1rem;
     line-height: 1.35rem;
     margin-bottom: 1rem;
-    color: var(--gray-600-text);
+    color: var(--text-secondary);
     text-align: justify;
 
     @media (max-width: 768px) { font-size: 1rem; } // tablet props

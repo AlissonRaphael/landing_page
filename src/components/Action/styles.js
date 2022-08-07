@@ -23,7 +23,7 @@ export const Button = styled.a`
   align-items: center;
   justify-content: center;
 
-  background-color: var(--primary);
+  background-color: var(--button-main);
   color: rgba(240,240,240,1);
 
   font-weight: bold;
@@ -53,7 +53,7 @@ export const Button = styled.a`
     background-image: url(${Pattern});
     background-size: 30px;
     background-position: 0%;
-    color: var(--white-text);
+    color: var(--text-main);
 
 
     animation: PATTERN_ANIMATION 10s linear infinite;

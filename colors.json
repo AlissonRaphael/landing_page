@@ -1,5 +1,28 @@
 {
-  "primary": "#FBC5C5",
-  "primary_darken": "#FBA1A1"
+  "primary": "#a4adff",
+  "primary_dark": "#727ecb",
+  "primary_light": "#ffd9d6",
 
+  "secondary": "#2A323C",
+  "secondary_dark": "#000a16",
+  "secondary_light": "#535b66",
+
+  "text_main": "#fff",
+  "text_secondary": "#7A899D",
+  "text_tertiary": "#313b47",
+
+  "background_main": "#191e23",
+  "background_secondary": "#191e23",
+
+  "background_card": "#222931",
+  "background_card_dark": "#1d2228",
+  "background_card_light": "#1d2228",
+
+  "border_main": "#222931",
+  "border_secondary": "#222931",
+  "border_tertiary": "#222931",
+
+  "button_main": "#39d8ae",
+  "button_dark": "#2cb590",
+  "button_light": "#69e8c0"
 }

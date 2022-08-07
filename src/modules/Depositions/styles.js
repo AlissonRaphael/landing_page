@@ -58,7 +58,7 @@ export const Title = styled.h1`
   @media (max-width: 768px) { font-size: 1.8rem; } // tablet props
   @media (max-width: 425px) { font-size: 1.5rem; } // mobile props
 
-  color: var(--white-text);
+  color: var(--text-main);
 `
 
 export const Deposition = styled.div`
@@ -70,7 +70,7 @@ export const Deposition = styled.div`
   display: flex;
   flex-direction: column;
 
-  background-color: var(--background-side-color);
+  background-color: var(--background-card-light);
   position: relative;
 
   .deposition {
@@ -79,7 +79,7 @@ export const Deposition = styled.div`
     font-style: italic;
     line-height: 1.35rem;
     text-align: justify;
-    color: var(--gray-600-text);
+    color: var(--text-secondary);
   }
 
   .perfil {

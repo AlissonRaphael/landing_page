@@ -6,11 +6,11 @@ export const HeaderContainer = styled.header`
   left: 0;
   z-index: 100;
 
-  border-bottom: 1px solid var(--background-card-color);
+  border-bottom: 1px solid var(--border-main);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 14px 28px;
 
   width: 100%;
-  background-color: var(--background-main-color);
+  background-color: var(--background-main);
 `
 
 export const HeaderStyle = styled.div`
@@ -48,12 +48,12 @@ export const Links = styled.nav`
 
   a {
     font-size: 0.8rem;
-    color: var(--gray-600-text);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: all 0.8s ease;
 
     :hover {
-      color: var(--white-text);
+      color: var(--text-main);
     }
   }
 `
@@ -67,7 +67,7 @@ export const Burger = styled.div`
     width: 20px;
     height: 3px;
     margin-bottom: 4px;
-    background-color: var(--gray-600-text);
+    background-color: var(--text-secondary);
 
     :last-child {
       margin-bottom: 0;

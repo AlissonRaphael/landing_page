@@ -28,7 +28,7 @@ export const Title = styled.h1`
   @media (max-width: 768px) { font-size: 1.8rem; } // tablet props
   @media (max-width: 425px) { font-size: 1.5rem; } // mobile props
 
-  color: var(--white-text);
+  color: var(--text-main);
 `
 
 export const Text = styled.div`
@@ -40,7 +40,7 @@ export const Text = styled.div`
     font-size: 1rem;
     line-height: 1.35rem;
     margin-bottom: 1.5rem;
-    color: var(--gray-600-text);
+    color: var(--text-secondary);
     text-align: center;
 
     @media (max-width: 768px) { font-size: 1rem; } // tablet props
@@ -78,7 +78,7 @@ export const Card = styled.li`
   gap: 10%;
   align-items: center;
 
-  background-color: var(--background-side-color);
+  background-color: var(--background-card-light);
   position: relative;
 
   svg {
@@ -100,12 +100,12 @@ export const Card = styled.li`
     width: 15px;
     height: 15px;
 
-    background-color: var(--background-side-color);
+    background-color: var(--background-card-light);
     transform: rotate(45deg);
   }
 
   .vertical, .horizontal {
-    background-color: var(--background-card-color);
+    background-color: var(--background-card);
   }
 
   .vertical {
@@ -139,7 +139,7 @@ export const Card = styled.li`
 
     h3 {
       margin-bottom: 0.5rem;
-      color: var(--white-text);
+      color: var(--text-main);
       display: flex;
       align-items: end;
 

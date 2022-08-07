@@ -10,7 +10,7 @@ export const Container = styled.section`
 
   position: relative;
 
-  background: linear-gradient(110deg, var(--primary) 0%, var(--primary) 50%, var(--primary-darken) 50%, var(--primary-darken) 100%);
+  background: linear-gradient(110deg, var(--primary) 0%, var(--primary) 50%, var(--primary-dark) 50%, var(--primary-dark) 100%);
   background-color: var(--primary);
 `
 

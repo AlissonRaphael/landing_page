@@ -30,7 +30,7 @@ export const Title = styled.h1`
   @media (max-width: 768px) { font-size: 1.8rem; } // tablet props
   @media (max-width: 425px) { font-size: 1.5rem; } // mobile props
 
-  color: var(--white-text);
+  color: var(--text-main);
 `
 
 export const Grid = styled.div`
@@ -42,11 +42,11 @@ export const Grid = styled.div`
 
     .accordion-item {
       background-color: transparent;
-      border: 1px solid var(--background-card-color);
+      border: 1px solid var(--border-main);
 
       .accordion-button {
-        background-color: var(--background-side-color);
-        color: var(--white-text);
+        background-color: var(--background-card-light);
+        color: var(--text-main);
 
         ::after {
           background-image: url(${Down});
@@ -54,8 +54,8 @@ export const Grid = styled.div`
       }
 
       .accordion-button.collapsed {
-        background-color: var(--background-side-color);
-        color: var(--gray-600-text);
+        background-color: var(--background-card-light);
+        color: var(--text-secondary);
 
         ::after {
           background-image: url(${Down});

@@ -5,8 +5,8 @@ export const ContainerStyle = styled.footer`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--background-side-color);
-    border-bottom: 1px solid var(--background-card-color);
+    background-color: var(--background-card-light);
+    border-bottom: 1px solid var(--border-main);
 `
 
 export const FooterStyle = styled.footer`

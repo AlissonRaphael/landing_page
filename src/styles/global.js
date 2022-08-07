@@ -7,21 +7,30 @@ export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
   :root {
-    --background-main-color: #191e23;
-    --background-card-color: #222931;
-    --background-side-color: #1d2228;
+    --background-main: ${colors.background_main};
+    --background-secondary: ${colors.background_secondary};
 
-    --white-text: #fff;
-    --gray-600-text: #7A899D;
-    --gray-400-text: #2f3945;
-    --gray-300-text: #444e5b;
-    --gray-200-text: #313b47;
-    --gray-100-text: #1b2126;
+    --border-main: ${colors.border_main};
+
+    --background-card: ${colors.background_card};
+    --background-card-light: ${colors.background_card_light};
+
+    --text-main: ${colors.text_main};
+    --text-secondary: ${colors.text_secondary};
+    --text-tertiary: ${colors.text_tertiary};
 
     --primary: ${colors.primary};
-    --secondary: #2A323C;
+    --primary-dark: ${colors.primary_dark};
+    --primary-light: ${colors.primary_light};
 
-    --primary-darken: ${colors.primary_darken};
+    --secondary: ${colors.secondary};
+    --secondary-dark: ${colors.secondary_dark};
+    --secondary-light: ${colors.secondary_light};
+
+    --button-main: ${colors.button_main};
+    --button-dark: ${colors.button_dark};
+    --button-light: ${colors.button_light};
+
   }
 
   * {
@@ -39,8 +48,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: var(--background-main-color);
-    color: var(--gray-600-text);
+    background-color: var(--background-main);
+    color: var(--text-secondary);
     position: relative;
   }
 
@@ -63,7 +72,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .modal .modal-dialog .modal-content {
-    background-color: var(--background-side-color);
+    background-color: var(--background-card-light);
 
     .modal-body {
       display: flex;

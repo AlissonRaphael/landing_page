@@ -29,7 +29,7 @@ export const TitleStyle = styled.h1`
   text-align: center;
   @media (max-width: 425px) { text-align: left; } // mobile props
 
-  color: var(--white-text);
+  color: var(--text-main);
 
   span {
     color: var(--primary);
@@ -48,7 +48,7 @@ export const SubTitleStyle = styled.h2`
   text-align: center;
   @media (max-width: 425px) { text-align: left; } // mobile props
 
-  color: var(--gray-600-text);
+  color: var(--text-secondary);
 
   span {
     color: var(--primary);

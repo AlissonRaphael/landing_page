@@ -54,7 +54,7 @@ export const Player = styled.div`
       height: 150px;
       padding: 1rem;
       font-size: 0.8rem;
-      color: var(--white-text);
+      color: var(--text-main);
 
       display: flex;
       align-items: center;
@@ -170,7 +170,7 @@ export const Player = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--background-card-color);
+        background-color: var(--background-card);
         z-index: 1;
       }
     }
@@ -182,7 +182,7 @@ export const Player = styled.div`
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: var(--background-card-color);
+      background-color: var(--background-card);
       z-index: 1;
     }
   }

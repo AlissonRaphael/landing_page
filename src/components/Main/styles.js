@@ -51,7 +51,7 @@ export const SquareBackground = styled.div`
   left: 0;
   z-index: -10;
 
-  border: 1px solid var(--background-card-color);
+  border: 1px solid var(--border-main);
 
   width: 100%;
 
@@ -60,5 +60,5 @@ export const SquareBackground = styled.div`
   @media (max-width: 768px) { height: 43%; } // tablet props
   @media (max-width: 425px) { height: 51%; } // mobile props
 
-  background-color: var(--background-side-color);
+  background-color: var(--background-card-light);
 `

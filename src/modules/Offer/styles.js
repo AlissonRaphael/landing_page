@@ -42,7 +42,7 @@ export const Title = styled.h1`
 
   text-align: center;
 
-  color: var(--white-text);
+  color: var(--text-main);
 
   span {
     color: var(--primary);
@@ -59,7 +59,7 @@ export const Price = styled.h1`
   @media (max-width: 768px) { font-size: 1.8rem; } // tablet props
   @media (max-width: 425px) { font-size: 1.5rem; } // mobile props
 
-  color: var(--white-text);
+  color: var(--text-main);
 
   .original {
     text-decoration: line-through;
@@ -98,7 +98,7 @@ export const SquareBackground = styled.div`
   left: 0;
   z-index: -10;
 
-  border: 1px solid var(--background-card-color);
+  border: 1px solid var(--border-main);
 
   width: 100%;
 
@@ -106,5 +106,5 @@ export const SquareBackground = styled.div`
   @media (max-width: 768px) { height: 50%; } // tablet props
   @media (max-width: 425px) { height: 60%; } // mobile props
 
-  background-color: var(--background-side-color);
+  background-color: var(--background-card-light);
 `
