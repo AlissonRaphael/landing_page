@@ -15,7 +15,7 @@ const icons = {
 }
 
 import { PitchContainer, Title, Text, Cards, Card } from './styles'
-import Plus from '../../assets/plus.svg'
+import PlusSVG from '../../components/SVGs/Plus'
 
 import parser from '../../helpers/parser'
 import configuration from '../../../configuration.json'
@@ -36,7 +36,7 @@ export default function Pitch () {
         {
           configuration.page_sections.pitch.content.map(({ title, icon, color, plus, description }, index) => (
             <Card color={color} key={index}>
-              { plus ? <img className="plus" src={Plus}/> : null }
+              { plus ? <PlusSVG/> : null }
               <i className="ball"></i>
               <i className="vertical"></i>
               <i className="horizontal"></i>

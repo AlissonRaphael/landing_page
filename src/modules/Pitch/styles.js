@@ -81,7 +81,7 @@ export const Card = styled.li`
   background-color: var(--background-side-color);
   position: relative;
 
-  .plus {
+  svg {
     position: absolute;
     top: -5px;
     right: 5%;
