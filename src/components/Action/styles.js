@@ -31,6 +31,7 @@ export const Button = styled.a`
   text-transform: uppercase;
   text-decoration: none;
 
+  animation: SCALE_ANIMATION 4s linear infinite;
   transition: background-color 0.2s ease-in-out;
 
   div {
@@ -56,7 +57,7 @@ export const Button = styled.a`
     color: var(--text-main);
 
 
-    animation: PATTERN_ANIMATION 10s linear infinite;
+    animation: PATTERN_ANIMATION 4s linear infinite;
 
     img {
       animation: HOVER_ICON 1s;
@@ -72,7 +73,18 @@ export const Button = styled.a`
   }
 
   @keyframes PATTERN_ANIMATION {
-    0% { background-position: 0%; }
-    100% { background-position: 100%; }
+    0% { background-position: 0%; transform: scale(1); }
+    25% { background-position: 25%; transform: scale(1.2); }
+    50% { background-position: 50%; transform: scale(1); }
+    75% { background-position: 75%; transform: scale(1.2); }
+    100% { background-position: 100%; transform: scale(1); }
+  }
+
+  @keyframes SCALE_ANIMATION {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.2); }
+    100% { transform: scale(1); }
   }
 `
