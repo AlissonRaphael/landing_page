@@ -3,6 +3,7 @@ import { HeadlineContainer, TitleStyle, SubTitleStyle } from './styles'
 import parser from '../../helpers/parser'
 import configuration from '../../../configuration.json'
 
+
 export default function Headline () {
   return (
     <HeadlineContainer>

@@ -4,6 +4,7 @@ import { VerticalLineDetail } from '../../components/Detail'
 import parser from '../../helpers/parser'
 import configuration from '../../../configuration.json'
 
+
 export default function Autority () {
   return (
     <AutorityContainer>

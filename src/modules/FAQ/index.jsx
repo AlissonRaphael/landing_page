@@ -4,6 +4,7 @@ import { UncontrolledAccordion, AccordionBody, AccordionHeader, AccordionItem } 
 import parser from '../../helpers/parser'
 import configuration from '../../../configuration.json'
 
+
 export default function FAQ () {
   return (
     <FAQContainer>

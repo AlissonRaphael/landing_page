@@ -5,7 +5,6 @@ import configuration from '../../../configuration.json'
 
 
 export default function Action ({ isMain, showButton }) {
-
   return (
     <ActionContainer isMain={isMain}>
       { showButton ?

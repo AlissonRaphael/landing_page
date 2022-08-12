@@ -2,6 +2,7 @@ import { ContainerStyle, FooterStyle } from './styles'
 import Menu from '../Header/Menu'
 import Logo from '../../assets/logo.png'
 
+
 export default function Footer () {
   return (
     <ContainerStyle>

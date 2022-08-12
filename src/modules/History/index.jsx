@@ -5,6 +5,7 @@ import ArrowRightSVG from '../../components/SVGs/ArrowRigth'
 import parser from '../../helpers/parser'
 import configuration from '../../../configuration.json'
 
+
 export default function History () {
   return (
     <HistoryContainer>

@@ -1,5 +1,6 @@
 import { ContainerStyle, DetailStyles, VerticalLineStyles, HorizontalLineStyles } from './styles'
 
+
 export function ContainerLineDetail () {
   return (
     <ContainerStyle>

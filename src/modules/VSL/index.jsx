@@ -44,6 +44,7 @@ const PLAYERS_CONFIG = {
   }
 }
 
+
 export default function VSL ({ setShowButton, setShowPage }) {
   const [init, setInit] = useState(false)
   const [play, setPlay] = useState(false)
